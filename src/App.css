@@ -1,27 +1,33 @@
 .App {
   height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(#14171a, #657786, #aab8c2);
+  background-image: linear-gradient(to top, #14171a, #657786, #aab8c2);
   overflow: hidden;
-}
-
-.keywords {
-  position: absolute;
-  top: 30%;
-  width: 50%;
-  height: 60%;
-  left: 25%;
-  overflow-y: auto;
 }
 
 .search-box {
   position: absolute;
   width: 50%;
   height: 20%;
-  left: 25%;
-  top: 10%;
+  left: 5%;
+  top: 15%;
 }
 
-#tooltip {
-  font-size: 24px !important;
+.word-cloud {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  top: 40%;
+  left: 5%;
+  height: 40%;
+  width: 50%;
 }
+
+/* .tweets {
+  position: absolute;
+  overflow-y: auto;
+  top: 5%;
+  right: 1%;
+  height: 90%;
+  width: 30%;
+} */

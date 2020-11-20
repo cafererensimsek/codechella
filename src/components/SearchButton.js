@@ -5,7 +5,7 @@ const Search = styled.button`
     visibility: hidden;
     position: absolute;
     left: 35%;
-    top: 49%;
+    top: 50%;
     height: 25%;
     width: 30%;
     background-color: #1DA1F2;

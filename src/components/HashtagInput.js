@@ -13,6 +13,7 @@ const HashtagInput = styled.input`
     font-size: 24px;
     border-radius: 50px;
     z-index: 1;
+    box-shadow: 0 0 10px black;
 `
 
 export default HashtagInput;
