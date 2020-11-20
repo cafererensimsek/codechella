@@ -23,11 +23,12 @@
   width: 50%;
 }
 
-/* .tweets {
+.see-tweets {
   position: absolute;
-  overflow-y: auto;
-  top: 5%;
-  right: 1%;
-  height: 90%;
-  width: 30%;
-} */
+  left: 44%;
+  bottom: 40%;
+  background-color: #1da1f2;
+  color: white;
+  width: 12%;
+  height: 15%;
+}

@@ -8,7 +8,7 @@ const HashtagInput = styled.input`
     height: 20%;
     padding: 3%;
     position: absolute;
-    left: 22%;
+    left: 25%;
     outline: none;
     font-size: 24px;
     border-radius: 50px;
