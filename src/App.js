@@ -15,9 +15,14 @@ const App = () => {
 
     useEffect(() => {
         const listener = event => {
-            if (event.code === "Enter" || event.code === "NumpadEnter") {
+            if ((event.code === "Enter" || event.code === "NumpadEnter") && hashtag.length > 1) {
                 setstatus(true);
-                fetch('/tweets').then(res => res.json()).then(data => {
+                fetch('/tweets', {
+                    method: 'POST', headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ 'search': hashtag })
+                }).then(res => res.json()).then(data => {
                     setWords(data['words']);
                     setFavorites(data['favorites'])
                 });
@@ -25,8 +30,7 @@ const App = () => {
         };
         document.addEventListener("keydown", listener);
         return () => document.removeEventListener("keydown", listener);
-
-    }, []);
+    }, [hashtag]);
 
     return (
         <div className="App">

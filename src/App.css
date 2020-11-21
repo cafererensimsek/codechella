@@ -1,7 +1,7 @@
 .App {
   height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(to top, #14171a, #657786, #aab8c2);
+  background-image: linear-gradient(to bottom, white, #1da1f2);
   overflow: hidden;
 }
 
@@ -9,7 +9,7 @@
   position: absolute;
   width: 50%;
   height: 20%;
-  left: 5%;
+  left: 25%;
   top: 15%;
 }
 
@@ -17,8 +17,8 @@
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 50px;
-  top: 40%;
-  left: 5%;
+  top: 50%;
+  left: 25%;
   height: 40%;
   width: 50%;
 }
