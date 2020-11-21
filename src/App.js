@@ -17,8 +17,8 @@ const App = () => {
             if (event.code === "Enter" || event.code === "NumpadEnter") {
                 setstatus(true);
                 fetch('/tweets').then(res => res.json()).then(data => {
-                    console.log(data)
-                    setWords([data]);
+                    console.log(data['result'])
+                    setWords(data['result']);
                 });
             }
         };
@@ -31,7 +31,8 @@ const App = () => {
         <div className="App">
             <AppContext.Provider value={{ 'hashtag': [hashtag, setHashtag], 'open': [open, setOpen], 'status': [status, setstatus] }}>
                 <Searchbox></Searchbox>
-                <Wordcloud status={status} words={words}></Wordcloud>
+                <Wordcloud status={status} words={words.slice(0, 50)}></Wordcloud>
+                {console.log(words)}
                 <Drawer></Drawer>
             </AppContext.Provider>
         </div>
