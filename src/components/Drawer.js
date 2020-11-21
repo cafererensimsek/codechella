@@ -5,7 +5,7 @@ import { AppContext } from '../App.js';
 import 'rsuite/dist/styles/rsuite-default.css';
 
 
-const TweetDrawer = () => {
+const TweetDrawer = (props) => {
     const open = useContext(AppContext)['open'][0];
     const setOpen = useContext(AppContext)['open'][1];
 
@@ -17,13 +17,7 @@ const TweetDrawer = () => {
     >
         <Drawer.Header>Most Popular Tweets</Drawer.Header>
         <Drawer.Body>
-            <TwitterTweetEmbed tweetId="933354946111705097" />
-            <TwitterTweetEmbed tweetId="933354946111705097" />
-            <TwitterTweetEmbed tweetId="933354946111705097" />
-            <TwitterTweetEmbed tweetId="933354946111705097" />
-            <TwitterTweetEmbed tweetId="933354946111705097" />
-            <TwitterTweetEmbed tweetId="933354946111705097" />
-            <TwitterTweetEmbed tweetId="933354946111705097" />
+            {props.favorites.map(favorite => <TwitterTweetEmbed tweetId={favorite} key={favorite} />)}
         </Drawer.Body>
     </Drawer>
 }

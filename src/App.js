@@ -11,14 +11,15 @@ const App = () => {
     const [open, setOpen] = useState(false);
     const [status, setstatus] = useState(false);
     const [words, setWords] = useState([]);
+    const [favorites, setFavorites] = useState([]);
 
     useEffect(() => {
         const listener = event => {
             if (event.code === "Enter" || event.code === "NumpadEnter") {
                 setstatus(true);
                 fetch('/tweets').then(res => res.json()).then(data => {
-                    console.log(data['result'])
-                    setWords(data['result']);
+                    setWords(data['words']);
+                    setFavorites(data['favorites'])
                 });
             }
         };
@@ -31,9 +32,8 @@ const App = () => {
         <div className="App">
             <AppContext.Provider value={{ 'hashtag': [hashtag, setHashtag], 'open': [open, setOpen], 'status': [status, setstatus] }}>
                 <Searchbox></Searchbox>
-                <Wordcloud status={status} words={words.slice(0, 50)}></Wordcloud>
-                {console.log(words)}
-                <Drawer></Drawer>
+                <Wordcloud status={status} words={words}></Wordcloud>
+                <Drawer favorites={favorites}></Drawer>
             </AppContext.Provider>
         </div>
     );
