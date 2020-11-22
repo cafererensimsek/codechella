@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import ReactWordcloud from 'react-wordcloud';
+import Keyword from './Keyword.js';
 
 
 const Wordcloud = memo(props => {

@@ -19,7 +19,7 @@ def tweets():
     if (hashtag[0] != '#'):
         hashtag = '#' + hashtag
 
-    tweets = api.search(hashtag, lang='en', count=1)
+    tweets = api.search(hashtag, lang='en', count=100)
 
     favoriteTweets = api.search(
         hashtag, lang='en', result_type='popular', count=10)

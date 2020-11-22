@@ -3,6 +3,7 @@ import Searchbox from './components/Searchbox.js';
 import Wordcloud from './components/Wordcloud.js';
 import Drawer from './components/Drawer.js';
 import './App.css';
+import Keywords from './components/Keyword.js';
 
 export const AppContext = createContext();
 
@@ -36,6 +37,7 @@ const App = () => {
         <div className="App">
             <AppContext.Provider value={{ 'hashtag': [hashtag, setHashtag], 'open': [open, setOpen], 'status': [status, setstatus] }}>
                 <Searchbox></Searchbox>
+                <Keywords words={words}></Keywords>
                 <Wordcloud status={status} words={words}></Wordcloud>
                 <Drawer favorites={favorites}></Drawer>
             </AppContext.Provider>
