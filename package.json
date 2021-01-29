@@ -33,8 +33,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "cd server && venv\\Scripts\\flask run --no-debugger",
-    "install-server": "cd server && python -m venv venv && venv\\Scripts\\activate && pip install tweepy nltk flask python-dotenv && exit()",
+    "server": "cd python_server && venv\\Scripts\\flask run --no-debugger",
+    "install-server": "cd python_server && python -m venv venv && venv\\Scripts\\activate && pip install tweepy nltk flask python-dotenv && exit()",
     "development": "NODE_ENV=development concurrently --kill-others \"npm run client\" \"npm run server\"",
     "production": "npm run build && NODE_ENV=production npm run server",
     "client": "react-scripts start",

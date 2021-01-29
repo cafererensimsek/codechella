@@ -10,6 +10,9 @@ app = Flask(__name__)
 
 @app.route('/tweets', methods=['POST'])
 def tweets():
+    nltk.download('stopwords')
+    nltk.download('punkt')
+
     auth = tweepy.OAuthHandler(config.consumer_key, config.consumer_secret)
     auth.set_access_token(config.access_token_key, config.access_token_secret)
     api = tweepy.API(auth)
